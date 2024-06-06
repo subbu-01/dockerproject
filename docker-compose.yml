@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  movies:
+    image: subbu00/moviesrepopaytm:latest
+    ports:
+      - 81:80
+    deploy:
+      replicas: 3
+  train:
+    image: subbu00/trainrepopaytm:latest
+    ports:
+      - 82:80
+    deploy:
+      replicas: 3
+  dth:
+    image: subbu00/dthrepopaytm:latest
+    ports:
+      - 83:80
+    deploy:
+      replicas: 3
+  recharge:
+    image: subbu00/rechargerepopaytm:latest
+    ports:
+      - 84:80
+    deploy:
+      replicas: 3
